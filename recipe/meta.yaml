@@ -1,15 +1,12 @@
-{% set name = "pendulum" %}
-{% set version = "1.2.4" %}
-{% set sha256 = "1f5554d329e870d114c7c83e30edf5ab1d43250edea2f621fb943811bb3743ba" %}
+{% set version = "1.3.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: pendulum
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/p/pendulum/pendulum-{{ version }}.tar.gz
+  sha256: 501d843c3679da48c6eee49b3cbd6e3e36017b34e4e7b6995ca16ad974d2c738
 
 build:
   number: 0
@@ -19,16 +16,18 @@ requirements:
   build:
     - python
     - setuptools
-    - toolchain
   run:
     - python
     - python-dateutil
-    - pytzdata
+    - pytzdata >=2017.2.2
     - tzlocal
 
 test:
   imports:
     - pendulum
+  commands:
+    - conda inspect linkages -p $PREFIX pendulum  # [not win]
+    - conda inspect objects -p $PREFIX pendulum  # [osx]
 
 about:
   home: https://pendulum.eustace.io
@@ -45,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - mcs07
+    - ocefpaf
