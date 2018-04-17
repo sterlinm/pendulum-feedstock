@@ -1,4 +1,4 @@
-{% set version = "1.4.4" %}
+{% set version = "1.5.0" %}
 
 package:
   name: pendulum
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pendulum/pendulum-{{ version }}.tar.gz
-  sha256: 601e52cb0425e94b1784b6613a9085e0066ae1fa1915d18771884b67e93cac5c
+  sha256: 395bfe54a737ec6a4a95e5850753dddefe52bd54461de896afc4ce2ac91d4b78
 
 build:
   number: 0
