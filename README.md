@@ -16,14 +16,16 @@ It behaves exactly like it but with many improvements.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pendulum-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pendulum-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pendulum-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pendulum-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pendulum-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pendulum-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pendulum-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pendulum-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pendulum-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pendulum-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pendulum-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pendulum-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pendulum/badges/version.svg)](https://anaconda.org/conda-forge/pendulum)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pendulum/badges/downloads.svg)](https://anaconda.org/conda-forge/pendulum)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pendulum-green.svg)](https://anaconda.org/conda-forge/pendulum) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pendulum.svg)](https://anaconda.org/conda-forge/pendulum) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pendulum.svg)](https://anaconda.org/conda-forge/pendulum) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pendulum.svg)](https://anaconda.org/conda-forge/pendulum) |
 
 Installing pendulum
 ===================
