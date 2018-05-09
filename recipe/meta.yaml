@@ -21,6 +21,7 @@ requirements:
     - python-dateutil
     - pytzdata
     - tzlocal
+    - typing  # [py<36]
 
 test:
   imports:
