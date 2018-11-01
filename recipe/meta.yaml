@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/p/pendulum/pendulum-{{ version }}.tar.gz
   sha256: cf535d36c063575d4752af36df928882b2e0e31541b4482c97d63752785f9fcb
+  patches:
+    - no-pyproject_toml.patch
 
 build:
   number: 1000
