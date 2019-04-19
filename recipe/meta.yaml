@@ -1,4 +1,4 @@
-{% set version = "1.4.4" %}
+{% set version = "2.0.4" %}
 
 package:
   name: pendulum
@@ -6,11 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pendulum/pendulum-{{ version }}.tar.gz
-  sha256: 601e52cb0425e94b1784b6613a9085e0066ae1fa1915d18771884b67e93cac5c
+  sha256: cf535d36c063575d4752af36df928882b2e0e31541b4482c97d63752785f9fcb
+  patches:
+    - no-pyproject_toml.patch
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1000
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
   build:
@@ -18,22 +20,19 @@ requirements:
     - pip
   run:
     - python
-    - python-dateutil
-    - pytzdata
-    - tzlocal
+    - python-dateutil >=2.6,<3.0
+    - pytzdata >=2018.3
+    - typing >=3.6,<4.0  # [py<35]
 
 test:
   imports:
     - pendulum
-  commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://pendulum.eustace.io
   license: MIT
   license_family: MIT
-  # license_file: LICENSE
+  license_file: LICENSE
   summary: 'Python datetimes made easy'
   description: |
     Drop-in replacement for the standard datetime class.
