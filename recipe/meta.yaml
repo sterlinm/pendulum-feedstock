@@ -9,7 +9,7 @@ source:
   sha256: 093cab342e10516660e64b935a6da1a043e0286de36cc229fb48471415981ffe
 
 build:
-  number: 0
+  number: 1
   script:
     - rm -f pyproject.toml  # [not win]
     - del /f pyproject.toml  # [win]
