@@ -11,14 +11,13 @@ source:
 build:
   number: 0
   script:
-    - rm -f pyproject.toml  # [not win]
-    - del /f pyproject.toml  # [win]
     - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
+    - poetry-core
   run:
     - python
     - python-dateutil >=2.6,<3.0
