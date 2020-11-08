@@ -9,7 +9,8 @@ source:
   sha256: b06a0ca1bfe41c990bbf0c029f0b6501a7f2ec4e38bfec730712015e8860f207
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -22,7 +23,6 @@ requirements:
     - python
     - python-dateutil >=2.6,<3.0
     - pytzdata >=2020.1
-    - typing >=3.6,<4.0  # [py<35]
 
 test:
   requires:
